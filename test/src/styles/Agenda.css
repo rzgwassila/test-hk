@@ -12,12 +12,15 @@ body {
     justify-content: center;
     min-height: 100vh;
     position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
   .agenda {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     width: 80%;
     position: relative;
@@ -99,13 +102,23 @@ body {
   .card li {
     padding: 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    display: flex;
+    flex-wrap: wrap;  /* Permet au texte de passer à la ligne */
+    white-space: normal;  /* Assure que le texte se comporte normalement */
+    line-height: 1.4;  /* Améliore la lisibilité */
   }
-  
+  .card li strong {
+    white-space: nowrap; /* Empêche le saut de ligne entre l'heure et le ":" */
+    margin-right: 5px;
+}
+.card li span {
+  display: block; /* Forcer la description à passer à la ligne */
+}
   .card li:last-child {
     border-bottom: none;
   }
   .card h2 {
-    font-size: 22px;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     color: cyan;
@@ -117,7 +130,7 @@ body {
     -webkit-text-fill-color: transparent;
   }
   .card p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     text-align: center;
     color: #a0c4ff;
@@ -125,5 +138,19 @@ body {
     font-style: italic;
     letter-spacing: 1px;
   }
+  @media (max-width: 768px) {
+    .agenda-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
+        word-wrap: break-word;  /* Ensures long words break properly */
+        overflow-wrap: break-word;
+        white-space: normal;  /* Allows text to wrap */
+    }
+}
   
   
