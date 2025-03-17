@@ -89,7 +89,7 @@ const Agenda = () => {
                 <ul>
                   {events.map((event, i) => (
                     <li key={i}>
-                      <strong>{event.time}: </strong>{" "}
+                      <strong>{event.time} : </strong>{" "}
                       <span>{event.description}</span>
                     </li>
                   ))}
