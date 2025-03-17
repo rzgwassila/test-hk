@@ -1,0 +1,129 @@
+body {
+    background-color: #0c1622;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .agenda-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .agenda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+    position: relative;
+    margin: 20px;
+  }
+  
+  .agenda-cards {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    width: 90%;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 250px;
+    background: #0c162215;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    opacity: 0.5;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+  }
+  
+  .card.active {
+    opacity: 1;
+    transform: scale(1);
+    border: 3px solid; 
+    border-image-source: linear-gradient(45deg, cyan, #213b5a); 
+    border-image-slice: 1; 
+  }
+  
+  /* Progress Bar */
+  .progress-bar-container {
+    width: 60%; 
+    height: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 30px auto;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: cyan;
+    transition: width 0.3s linear;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .controls button {
+    background: none;
+    border: 2px solid;
+    border-image: linear-gradient(to right, #213b5a, cyan) 1;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .controls button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .card ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+  }
+  
+  .card li:last-child {
+    border-bottom: none;
+  }
+  .card h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: cyan;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, cyan, #213b5a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .card p {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #a0c4ff;
+    margin-bottom: 15px;
+    font-style: italic;
+    letter-spacing: 1px;
+  }
+  
+  
