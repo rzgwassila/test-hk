@@ -1,66 +1,100 @@
 /* FAQ Section Styles */
 .faq-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    color: white;
-  }
-  
-  .faq-box {
-    border: 2px solid; 
-    border-image: linear-gradient(to right, #213b5a, cyan) 1;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #0c1622;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  color: white;
 }
 
-  
+.faq-box {
+  border: 2px solid;
+  border-image: linear-gradient(to right, #213b5a, cyan) 1;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #0c1622;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.faq-subtitle {
+  text-align: center;
+  color: cyan;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  margin-top: 20px;
+}
+
+/* FAQ Item */
+.faq-item {
+  border-bottom: 1px solid gray;
+  padding: 12px 0;
+}
+
+/* FAQ Question Button */
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+/* Adjust spacing for mobile screens */
+.faq-text {
+  flex: 1;
+  white-space: normal; /* Prevents text from overflowing */
+}
+
+.faq-icon {
+  color: cyan;
+  font-size: 20px;
+}
+
+/* FAQ Answer */
+.faq-answer {
+  margin-top: 8px;
+  color: lightgray;
+  font-size: 16px;
+  padding-left: 20px;
+  max-width: 100%;
+  word-wrap: break-word; /* Ensures text wraps properly */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .faq-container {
+    width: 95%;
+    padding: 15px;
+  }
+
   .faq-title {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 22px;
   }
-  
-  .faq-subtitle {
-    text-align: center;
-    color: cyan;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  
-  .faq-list {
-    margin-top: 20px;
-  }
-  
-  .faq-item {
-    border-bottom: 1px solid gray;
-    padding: 12px 0;
-  }
-  
+
   .faq-question {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-    background: none;
-    border: none;
-    color: white;
-    text-align: left;
-    cursor: pointer;
-    padding: 10px 0;
-  }
-  
-  .faq-icon {
-    color: cyan;
-    font-size: 18px;
-  }
-  
-  .faq-answer {
-    margin-top: 8px;
-    color: lightgray;
     font-size: 16px;
-    padding-left: 20px;
   }
-  
+
+  .faq-icon {
+    font-size: 16px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+}

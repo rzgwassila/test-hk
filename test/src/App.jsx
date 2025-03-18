@@ -19,6 +19,7 @@ function App() {
       <section id="agenda">
         <Agenda />
       </section>
+
       <section id="faq">
         <FAQ />
       </section>

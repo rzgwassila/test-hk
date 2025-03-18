@@ -51,7 +51,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div key={index} className="faq-item">
               <button onClick={() => toggleFAQ(index)} className="faq-question">
-                <span>
+                <span className="faq-text">
                   {index + 1}. {faq.question}
                 </span>
                 {openIndex === index ? (
