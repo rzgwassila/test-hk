@@ -5,4 +5,9 @@
 }
 html{
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
+section {
+    height: 100vh; /* Makes each section full-screen */
+    padding-top: 50px;
+  }

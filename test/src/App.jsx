@@ -1,17 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
 import Agenda from "./components/Agenda";
+import About from "./components/About";
 import Navbar from "./components/NavBar";
 import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <div>
       <Navbar />
-      <Routes>
-        <Route path="/agenda" element={<Agenda />} />
-      </Routes>
-    </Router>
+      <section id="home">
+        <Home />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="agenda">
+        <Agenda />
+      </section>
+    </div>
   );
 }
 

@@ -1,9 +1,15 @@
 nav {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   padding: 18px;
   border-bottom: 1px solid white;
+  z-index: 1000; 
 }
 
 nav ul {
@@ -28,5 +34,7 @@ nav ul li a:hover {
   color: cyan;
 
 }
-
+body {
+  padding-top: 60px; /* Adjust this based on your navbar height */
+}
 
